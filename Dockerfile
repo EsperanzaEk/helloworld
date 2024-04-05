@@ -4,7 +4,7 @@ FROM python:3.7-slim
 # Instalamos las dependencias en producción.
 RUN pip install Flask gunicorn
 # Copiamos el código local a la imágen contenedor.
-WORKDIR /app
+WORKDIR /main.py
 COPY . .
 # El servicio escucha a $PORT variable de entorno.
 # Este valor local predeterminado facilita el despliegue.
